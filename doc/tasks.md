@@ -1,6 +1,6 @@
 ## Tasks
 
- # | Task name | estimation
+ num | Task name | estimation
 --- | --------- | -----------
  #1 | prepare data schema for UI and edited object | 0.5h
  #2 | prepare technical environment for project - it should support modern browsers | 1.5h

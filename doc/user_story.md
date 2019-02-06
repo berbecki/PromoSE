@@ -20,17 +20,17 @@ Our users want to have simple editor. They want to be able add their text and lo
 Assets folder 
 * [assets](https://drive.google.com/open?id=1l0AzbGZHCo2lOrxCpUfehOZ1mi48k7bJ)
 
-![Editor Full](https://www.dropbox.com/s/ywqrosniarhafh0/image3.png?dl=0)
+![Editor Full](https://www.dropbox.com/s/ywqrosniarhafh0/image3.png?dl=1)
 
 ## Editor
 
 Square area 400px x 400px
 
-![Editor](https://www.dropbox.com/s/8kxte0vsb1we9hg/image2.png?dl=0)
+![Editor](https://www.dropbox.com/s/8kxte0vsb1we9hg/image2.png?dl=1)
 
 ## Select background
 
-![Select background](https://www.dropbox.com/s/cw09teaonj35n8m/image7.png?dl=0)
+![Select background](https://www.dropbox.com/s/cw09teaonj35n8m/image7.png?dl=1)
 
 Area contains 4 thumbnails of images.
 Click on thumbnail - sets image as background for editor area. Our users don’t want to reposition it, resize or do any manipulations with it, they just want to see their background on the back.
@@ -43,7 +43,7 @@ In the assets folder you will be able to find empty_background file which you ca
 
 ## Add logo
 
-![Add logo](https://www.dropbox.com/s/x1vy3he37kiyfkc/image1.png?dl=0)
+![Add logo](https://www.dropbox.com/s/x1vy3he37kiyfkc/image1.png?dl=1)
 
 * User should be able to add logo via drag’n’drop. On drop to the editor area create 100px x 100px logo
 * User can add multiple logos.
@@ -51,7 +51,7 @@ In the assets folder you will be able to find empty_background file which you ca
 * Click on logo shows “delete” button.
 * Click on “delete” button removes logo from editor.
 
-![Add logo](https://www.dropbox.com/s/zj0zce4fbjp3lgj/image8.png?dl=0)
+![Add logo](https://www.dropbox.com/s/zj0zce4fbjp3lgj/image8.png?dl=1)
 
 - [ + ] Logo should be always in bounds of editor area.
 - [ + ] User can resize logo. Minimal size 30px x 30px Maximal size 150px x 150px.
@@ -59,7 +59,7 @@ In the assets folder you will be able to find empty_background file which you ca
 
 ## Add text
 
-![Add text](https://www.dropbox.com/s/fhq1qsrr29kopnr/image4.png?dl=0)
+![Add text](https://www.dropbox.com/s/fhq1qsrr29kopnr/image4.png?dl=1)
 
 * User should be able to add text to the editor.
 * User should be able to provide his own text via text Input.
@@ -78,11 +78,11 @@ In the assets folder you will be able to find empty_background file which you ca
 
 User should be able to download resulting image as file.
 
-![Add text](https://www.dropbox.com/s/wj5oo9v8580lvi9/image6.png?dl=0)
+![Add text](https://www.dropbox.com/s/wj5oo9v8580lvi9/image6.png?dl=1)
 
 ## [ + ] Save / Load
 
-![Add text](https://www.dropbox.com/s/qyp7d0ybk2kcz1e/image5.png?dl=0)
+![Add text](https://www.dropbox.com/s/qyp7d0ybk2kcz1e/image5.png?dl=1)
 
 * On click “Save” - saves current state of the editor
 * On click “Load” - restores saved state (if there is no saved state, “Load” button should be disabled)
