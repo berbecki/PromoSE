@@ -2,6 +2,118 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: var(--app-font-root-size);
+}
+
+h2 {
+    margin: 0.2rem;
+}
+
+body,
+html {
+    font-family: var(--app-font-family);
+}
+
+body {
+    font-size: var(--app-font-size);
+    background: var(--app-background);
+}
+
 .app {
+    display: grid;
+    grid-template-columns: 200px 400px 200px;
+    grid-template-rows: 2rem 400px 2rem;
+    grid-template-areas:
+        '. editorHeader .'
+        'backgroundSelector editor righttop'
+        'backgroundSelector editorAction appActions';
+    grid-gap: 1rem 2rem;
+    justify-items: stretch;
+    justify-content: center;
+    width: 1200px;
+    margin: 2rem auto;
+}
+
+.editorHeader {
+    grid-area: editorHeader;
+    text-align: center;
+}
+.backgroundSelector {
+    text-align: center;
+    grid-area: backgroundSelector;
+}
+.editor {
+    grid-area: editor;
+}
+.editorAction {
+    grid-area: editorAction;
+    text-align: center;
+}
+.addLogo {
+    grid-area: righttop;
+}
+
+.appActions {
+    grid-area: appActions;
+    text-align: center;
+}
+
+.editorArea {
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 56px -8px rgba(0, 0, 0, 0.3);
+    background: url('/images/empty_background.bmp') center center;
+}
+
+.backgroundSelectorList {
+    margin: 0 0 1rem;
+    padding: 0;
+    list-style-type: none;
     display: block;
+    width: 100%;
+    text-align: center;
+    li {
+        margin: 0.5rem;
+        img {
+            border: 2px solid #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: border 200ms ease-in-out;
+            &:hover {
+                border: 2px solid #60ddc2;
+            }
+        }
+    }
+}
+
+.logoList {
+    margin: 0 0 1rem;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    li {
+        background: white;
+        padding: 0.5rem;
+        margin: 0.25rem;
+        img {
+            cursor: grab;
+        }
+    }
+}
+
+.baseInput {
+    width: 100%;
+    height: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.baseRadios {
+    margin: 0.5rem;
+    input {
+        margin: 0.2rem 0;
+    }
 }
