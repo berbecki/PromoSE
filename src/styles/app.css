@@ -39,10 +39,7 @@ body {
     grid-area: editorHeader;
     text-align: center;
 }
-.backgroundSelector {
-    text-align: center;
-    grid-area: backgroundSelector;
-}
+
 .editor {
     grid-area: editor;
 }
@@ -64,27 +61,6 @@ body {
     height: 400px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 56px -8px rgba(0, 0, 0, 0.3);
     background: url('/images/empty_background.bmp') center center;
-}
-
-.backgroundSelectorList {
-    margin: 0 0 1rem;
-    padding: 0;
-    list-style-type: none;
-    display: block;
-    width: 100%;
-    text-align: center;
-    li {
-        margin: 0.5rem;
-        img {
-            border: 2px solid #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            transition: border 200ms ease-in-out;
-            &:hover {
-                border: 2px solid #60ddc2;
-            }
-        }
-    }
 }
 
 .logoList {

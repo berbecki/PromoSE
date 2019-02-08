@@ -3,12 +3,21 @@ import classNames from 'classnames'
 
 import styles from './button.css'
 
-const Button = ({ children, block, type }) => {
+const Button = ({ children, block, type, onClickCallback }) => {
     const btnClass = classNames(styles.button, {
         [styles.block]: block,
-        [styles.actionBtn]: type === 'action'
+        [styles.actionBtn]: type === 'action',
     })
-    return <div className={btnClass}>{children}</div>
+    return (
+        <div
+            onClick={() => {
+                onClickCallback()
+            }}
+            className={btnClass}
+        >
+            {children}
+        </div>
+    )
 }
 
 export default Button
