@@ -9,12 +9,28 @@ export default function project(
             ],
             active: -1,
         },
+        logo: [],
     },
     action,
 ) {
     switch (action.type) {
         case 'SET_SELECTED_BG_INDEX':
             return { ...project, background_image: { ...project.background_image, active: action.index } }
+        case 'ADD_IMG_TO_SCENE':
+            return { ...project, logo: project.logo.concat({ ...action.data }) }
+        case 'UPDATE_IMG_ON_SCENE':
+            return {
+                ...project,
+                logo: project.logo.map((elem, id) => {
+                    if (id === action.index) {
+                        elem.x = action.x
+                        elem.y = action.y
+                    }
+                    return elem
+                }),
+            }
+        case 'DELETE_IMG_FROM_SCENE':
+            return { ...project }
         default:
             return project
     }

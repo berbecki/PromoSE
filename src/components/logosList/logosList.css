@@ -1,0 +1,15 @@
+.logoList {
+    margin: 0 0 1rem;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    li {
+        background: white;
+        padding: 0.5rem;
+        margin: 0.25rem;
+        img {
+            cursor: grab;
+        }
+    }
+}

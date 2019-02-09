@@ -6,7 +6,6 @@ import { Button } from '../ui'
 
 class BackgroundSelectorView extends Component {
     _clickImg = index => {
-        console.log('click img: ', index)
         this.props.action(index)
     }
     render() {
@@ -14,7 +13,6 @@ class BackgroundSelectorView extends Component {
             title,
             data: { source, active },
         } = this.props
-        console.log('active', active)
         return (
             <div className={styles.backgroundSelector}>
                 <h2>{title}</h2>

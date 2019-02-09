@@ -3,4 +3,9 @@
     height: 400px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 56px -8px rgba(0, 0, 0, 0.3);
     background-position: center center;
+    transition: box-shadow 200ms ease-in-out;
+}
+
+.isOver {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 6px 46px -8px rgba(96, 221, 194, 1);
 }

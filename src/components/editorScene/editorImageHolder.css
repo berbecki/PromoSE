@@ -1,0 +1,13 @@
+.editorImageHolder {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+.imgItem {
+    position: absolute;
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
