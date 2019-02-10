@@ -1,3 +1,12 @@
+import {
+    SET_SELECTED_BG_INDEX,
+    ADD_IMG_TO_SCENE,
+    UPDATE_IMG_ON_SCENE,
+    DELETE_IMG_FROM_SCENE,
+    ADD_TEXT_TO_SCENE,
+    UPDATE_TEXT_POSITION_ON_SCENE,
+} from '../constants/actionsConstants'
+
 export default function project(
     project = {
         background_image: {
@@ -10,15 +19,16 @@ export default function project(
             active: -1,
         },
         logo: [],
+        text: null,
     },
     action,
 ) {
     switch (action.type) {
-        case 'SET_SELECTED_BG_INDEX':
+        case SET_SELECTED_BG_INDEX:
             return { ...project, background_image: { ...project.background_image, active: action.index } }
-        case 'ADD_IMG_TO_SCENE':
+        case ADD_IMG_TO_SCENE:
             return { ...project, logo: project.logo.concat({ ...action.data }) }
-        case 'UPDATE_IMG_ON_SCENE':
+        case UPDATE_IMG_ON_SCENE:
             return {
                 ...project,
                 logo: project.logo.map((elem, id) => {
@@ -29,7 +39,11 @@ export default function project(
                     return elem
                 }),
             }
-        case 'DELETE_IMG_FROM_SCENE':
+        case ADD_TEXT_TO_SCENE:
+            return { ...project, text: { ...action.data } }
+        case UPDATE_TEXT_POSITION_ON_SCENE:
+            return { ...project, text: { ...project.text, position: { x: action.x, y: action.y } } }
+        case DELETE_IMG_FROM_SCENE:
             return { ...project }
         default:
             return project

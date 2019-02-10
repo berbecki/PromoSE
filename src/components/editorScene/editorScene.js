@@ -7,7 +7,7 @@ import classNames from 'classnames'
 
 import EditorImageHolder from './editorImageHolder'
 
-import { addImgToScene } from '../../redux/actions/backgroundSelectorActions'
+import { addImgToScene } from '../../redux/actions/addLogoActions'
 
 import { ItemTypes } from '../../redux/constants/dragConstants'
 import styles from './editorScene.css'

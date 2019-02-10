@@ -3,11 +3,14 @@ import classNames from 'classnames'
 
 import styles from './button.css'
 
-const Button = ({ children, block, type, onClickCallback }) => {
+const Button = ({ children, block, type, onClickCallback, formButton }) => {
     const btnClass = classNames(styles.button, {
         [styles.block]: block,
         [styles.actionBtn]: type === 'action',
     })
+    if (formButton) {
+        return <button className={btnClass}>{children}</button>
+    }
     return (
         <div
             onClick={() => {
@@ -18,6 +21,7 @@ const Button = ({ children, block, type, onClickCallback }) => {
             {children}
         </div>
     )
+
 }
 
 export default Button

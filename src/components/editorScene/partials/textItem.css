@@ -1,0 +1,14 @@
+.textItem {
+    position: absolute;
+    text-align: center;
+}
+
+.fontArial {
+    font-family: Arial, sans-serif;
+}
+.fontTimes {
+    font-family: "Times New Roman", Times, Serif;
+}
+.fontOpensans {
+    font-family: "Open Sans", sans-serif;
+}

@@ -2,6 +2,7 @@
     width: 400px;
     height: 400px;
     position: relative;
+    overflow: hidden;
 }
 .imgItem {
     position: absolute;

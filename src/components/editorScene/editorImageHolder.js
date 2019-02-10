@@ -4,10 +4,12 @@ import { DropTarget } from 'react-dnd'
 import { ItemTypes } from '../../redux/constants/dragConstants'
 
 import ImageItem from './imageItem'
+import TextItem from './partials/textItem'
 
 import styles from './editorImageHolder.css'
 import { bindActionCreators } from 'redux'
-import { updateImgOnScene } from '../../redux/actions/backgroundSelectorActions'
+import { updateImgOnScene } from '../../redux/actions/addLogoActions'
+import { updateTextPositionOnScene } from '../../redux/actions/addTextActions'
 
 function mapStateToProps(state) {
     return {
@@ -15,7 +17,7 @@ function mapStateToProps(state) {
     }
 }
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ updateImgOnScene }, dispatch)
+    return bindActionCreators({ updateImgOnScene, updateTextPositionOnScene }, dispatch)
 }
 
 const boxTarget = {
@@ -28,7 +30,7 @@ const boxTarget = {
         const left = Math.round(item.x + delta.x)
         const top = Math.round(item.y + delta.y)
 
-        component.moveElement(item.groupIndex, left, top)
+        component.moveElement(item.type, item.groupIndex, left, top)
     },
 }
 
@@ -45,18 +47,22 @@ function collect(connect, monitor) {
 )
 @DropTarget(ItemTypes.PLACED_LOGO, boxTarget, collect)
 class EditorImageHolder extends Component {
-    moveElement(index, x, y) {
+    moveElement(type, index, x, y) {
+        if (type === 'TEXT') {
+            this.props.updateTextPositionOnScene(x, y)
+        }
         this.props.updateImgOnScene(index, x, y)
     }
     render() {
-        const { logo } = this.props.project
+        const { logo, text } = this.props.project
         const { connectDropTarget } = this.props
-        if (logo.length > 0) {
+        if (logo.length > 0 || text) {
             return connectDropTarget(
                 <div className={styles.editorImageHolder}>
                     {logo.map((element, i) => {
                         return <ImageItem key={i} {...element} groupIndex={i} />
                     })}
+                    {text ? <TextItem {...text} /> : null}
                 </div>,
             )
         }
