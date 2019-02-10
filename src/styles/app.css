@@ -51,11 +51,6 @@ body {
     grid-area: righttop;
 }
 
-.appActions {
-    grid-area: appActions;
-    text-align: center;
-}
-
 .editorArea {
     width: 400px;
     height: 400px;

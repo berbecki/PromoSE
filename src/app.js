@@ -11,6 +11,7 @@ import BackgroundSelector from './components/backgroundSelector/backgroundSelect
 import EditorScene from './components/editorScene/editorScene'
 import LogosList from './components/logosList/logosList'
 import TextAdder from './components/textAdder/textAdder'
+import SaveLoad from './components/saveLoad/saveLoad'
 
 import { Button } from './components/ui'
 
@@ -53,9 +54,7 @@ class App extends Component {
                             <LogosList />
                             <TextAdder title="Add text" />
                         </div>
-                        <div className={styles.appActions}>
-                            <Button type={'action'}>Save</Button> <Button>Load</Button>
-                        </div>
+                        <SaveLoad />
                     </div>
                 </DragDropContextProvider>
             </Provider>
