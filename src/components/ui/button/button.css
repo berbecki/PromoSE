@@ -10,6 +10,9 @@
     border-radius: 1rem;
     background: #f9f9f9;
     transition: all 200ms ease-in-out;
+    color: #2a2a2a;
+    font-size:0.75rem;
+    font-family: var(--app-font-family);
     &:hover {
         border: 1px solid #c3c3c3;
         box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
@@ -19,7 +22,15 @@
     background: #60ddc2;
     border: 1px solid #5cc9ae;
 }
+.warningBtn {
+    background: #dd6369;
+    border: 1px solid #cb6266;
+}
 .block {
     display: flex;
     width: 100%;
+}
+
+.small {
+    height: 1.25rem;
 }

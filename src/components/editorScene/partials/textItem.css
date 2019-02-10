@@ -1,6 +1,17 @@
 .textItem {
     position: absolute;
     text-align: center;
+    cursor: move;
+}
+
+.textItemBox {
+    position: absolute;
+}
+
+.textItemBoxAction {
+    position: absolute;
+    bottom: -2rem;
+    left: calc(50% - 35px)
 }
 
 .fontArial {

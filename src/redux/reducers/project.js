@@ -5,7 +5,8 @@ import {
     DELETE_IMG_FROM_SCENE,
     ADD_TEXT_TO_SCENE,
     UPDATE_TEXT_POSITION_ON_SCENE,
-    UPLOAD_PROJECT_FROM_LS
+    UPLOAD_PROJECT_FROM_LS,
+    DELETE_TEXT_FROM_SCENE,
 } from '../constants/actionsConstants'
 
 export default function project(
@@ -42,6 +43,8 @@ export default function project(
             }
         case ADD_TEXT_TO_SCENE:
             return { ...project, text: { ...action.data } }
+        case DELETE_TEXT_FROM_SCENE:
+            return { ...project, text: null }
         case UPDATE_TEXT_POSITION_ON_SCENE:
             return { ...project, text: { ...project.text, position: { x: action.x, y: action.y } } }
         case UPLOAD_PROJECT_FROM_LS:
