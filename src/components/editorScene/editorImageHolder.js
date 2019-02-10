@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { DropTarget } from 'react-dnd'
 import { ItemTypes } from '../../redux/constants/dragConstants'
 
-import ImageItem from './imageItem'
+import ImageItem from './partials/imageItem'
 import TextItem from './partials/textItem'
 
 import styles from './editorImageHolder.css'

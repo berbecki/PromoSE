@@ -1,0 +1,17 @@
+.imgItem {
+    position: absolute;
+    cursor: move;
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+.imgItemBox {
+    position: relative;
+}
+.imgItemBoxAction {
+    position: absolute;
+    bottom: -1.5rem;
+    left: calc(50% - 35px)
+}

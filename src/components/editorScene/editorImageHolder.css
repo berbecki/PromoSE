@@ -2,13 +2,4 @@
     width: 400px;
     height: 400px;
     position: relative;
-    overflow: hidden;
-}
-.imgItem {
-    position: absolute;
-    img {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
 }
