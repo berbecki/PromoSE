@@ -30,7 +30,6 @@ class SaveLoad extends Component {
                 <Button
                     onClickCallback={() => {
                         const LSProject = localStorage.getItem('project')
-                        console.log(LSProject)
                         this.props.uploadProjectFromLS(JSON.parse(LSProject))
                     }}
                 >

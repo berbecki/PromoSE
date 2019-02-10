@@ -4,6 +4,7 @@ import {
     UPDATE_IMG_ON_SCENE,
     DELETE_IMG_FROM_SCENE,
     ADD_TEXT_TO_SCENE,
+    UPDATE_TEXT_ON_SCENE,
     UPDATE_TEXT_POSITION_ON_SCENE,
     UPLOAD_PROJECT_FROM_LS,
     DELETE_TEXT_FROM_SCENE,
@@ -43,9 +44,17 @@ export default function project(
             }
         case ADD_TEXT_TO_SCENE:
             return { ...project, text: { ...action.data } }
+        case UPDATE_TEXT_ON_SCENE:
+            return {
+                ...project,
+                text: { ...project.text, content: action.data.content, format: { ...action.data.format } },
+            }
         case DELETE_IMG_FROM_SCENE:
             const { id } = action
-            return { ...project, logo: project.logo.slice(0, id).concat(project.logo.slice(id + 1, project.logo.length)) }
+            return {
+                ...project,
+                logo: project.logo.slice(0, id).concat(project.logo.slice(id + 1, project.logo.length)),
+            }
         case DELETE_TEXT_FROM_SCENE:
             return { ...project, text: null }
         case UPDATE_TEXT_POSITION_ON_SCENE:

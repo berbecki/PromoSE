@@ -10,6 +10,8 @@ import { ItemTypes } from '../../../redux/constants/dragConstants'
 import styles from './imageItem.css'
 import { deleteImgFromScene } from '../../../redux/actions/addLogoActions'
 
+const DEFAULT_IMG_SIZE = 100
+
 function mapStateToProps(state) {
     return {
         ...state,
@@ -57,7 +59,7 @@ class ImageItem extends Component {
     }
     render() {
         const { src, x, y, connectDragSource, isDragging } = this.props
-        const style = { left: x, top: y, width: '40px', height: '40px', opacity: isDragging ? 0.3 : 1 }
+        const style = { left: x, top: y, width: `${DEFAULT_IMG_SIZE}px`, height: `${DEFAULT_IMG_SIZE}px`, opacity: isDragging ? 0.3 : 1 }
         const deleteBtn = (
             <div className={styles.imgItemBoxAction}>
                 <Button type="warning" onClickCallback={this._removeItem} small>
