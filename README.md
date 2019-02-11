@@ -22,7 +22,7 @@ npm install
 
 * run app
 ```terminal
-npm install
+npm start
 ```
 
 * open the app in your browser
