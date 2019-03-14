@@ -1,3 +1,5 @@
+[![Known Vulnerabilities](https://snyk.io/test/github/berbecki/PromoSE/badge.svg)](https://snyk.io/test/github/berbecki/PromoSE)
+
 # PromoSE - Simple Editor
 
 * [user story](/doc/user_story.md)
